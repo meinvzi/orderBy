@@ -1,0 +1,31 @@
+<div>
+    <style>
+        .ulbox{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:.44rem;
+            left:0;
+            background-color:rgba(0, 0, 0, .5);
+            border-top: 1px solid #ccc;
+        }
+        .ulbox ul{
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap
+        }
+        .ulbox ul li{
+            flex-basis: 100%;
+            text-align: left;
+            padding-left: .2rem;
+        }
+</style>
+    <div class="ulbox" ng-hide="temp" ng-click="classify()">
+        <ul>
+            <li ng-click="select('火锅')">火锅</li>
+            <li ng-click="select('自助餐')">自助餐</li>
+            <li ng-click="select('甜点')">甜点</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div>
+    <style>
+        .dl-box{
+            width: 100%;
+        }
+        .dl-box dl{
+            display: flex
+        }
+        .dl-box dl dt{
+            flex: 4;
+        }
+        .dl-box dl dd{
+            flex: 6;
+        }
+    </style>
+<div class="dl-box">
+    <dl ng-repeat="item in data | filter:screen|orderBy:rank">
+        <dt><img ng-src="{{item.image}}"></dt>
+        <dd>
+            <h3>{{item.name}}</h3>
+            <p>{{item.type}}</p>
+            <p>人气：{{item.popularity}}</p>
+            <p>价格：{{item.evaluate}}</p>
+        </dd>
+    </dl>
+    <ui-view></ui-view>
+</div>
+
+</div>
